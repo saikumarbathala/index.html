@@ -1,0 +1,130 @@
+export default function Portfolio() {
+  const skills = [
+    'Docker',
+    'Kubernetes',
+    'Jenkins',
+    'Terraform',
+    'Git & GitHub',
+    'Linux',
+    'CI/CD Pipelines',
+    'AWS Basics',
+    'Groovy Scripting'
+  ];
+
+  const projects = [
+    {
+      title: 'CI/CD Pipeline Automation',
+      desc: 'Built an automated CI/CD pipeline using Jenkins, Docker, and GitHub for seamless application deployment.'
+    },
+    {
+      title: 'Dockerized Web Application',
+      desc: 'Containerized a web application using Docker and managed deployments efficiently.'
+    },
+    {
+      title: 'Kubernetes Deployment Project',
+      desc: 'Deployed scalable applications using Kubernetes with services, deployments, and ingress setup.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-24 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          Hi, I'm <span className="text-blue-400">Saikumar</span>
+        </h1>
+        <p className="text-lg md:text-2xl text-gray-300 max-w-2xl">
+          Aspiring DevOps Engineer passionate about Docker, Kubernetes,
+          Jenkins, Terraform, and building modern CI/CD pipelines.
+        </p>
+
+        <div className="flex gap-4 mt-8 flex-wrap justify-center">
+          <button className="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-2xl text-lg font-semibold shadow-lg">
+            View Projects
+          </button>
+          <button className="border border-gray-500 hover:border-blue-400 hover:text-blue-400 transition px-6 py-3 rounded-2xl text-lg font-semibold">
+            Contact Me
+          </button>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 className="text-4xl font-bold mb-6 text-blue-400">About Me</h2>
+          <p className="text-gray-300 text-lg leading-8">
+            I'm currently learning and building projects in DevOps and Cloud.
+            I enjoy working with automation tools, containerization, and modern deployment workflows.
+            My goal is to become a skilled DevOps Engineer and work on scalable cloud infrastructure.
+          </p>
+        </div>
+
+        <div className="bg-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-800">
+          <h3 className="text-2xl font-semibold mb-6">Quick Info</h3>
+          <div className="space-y-4 text-gray-300">
+            <p>🎓 Siddharth Institute of Engineering and Technology</p>
+            <p>💻 Focus Area: DevOps & Cloud</p>
+            <p>🚀 Interested in CI/CD, Kubernetes & Automation</p>
+            <p>📍 Andhra Pradesh, India</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="bg-gray-950 py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-12 text-blue-400">Skills</h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:scale-105 transition duration-300 shadow-lg"
+              >
+                <p className="text-lg font-semibold">{skill}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-20 px-6 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-14 text-blue-400">
+          Projects
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-900 rounded-3xl p-8 border border-gray-800 hover:border-blue-500 transition shadow-xl"
+            >
+              <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+              <p className="text-gray-300 leading-7">{project.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-gray-950 py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6 text-blue-400">Contact</h2>
+        <p className="text-gray-300 text-lg mb-8">
+          Want to collaborate or connect? Feel free to reach out.
+        </p>
+
+        <div className="flex flex-col gap-4 items-center text-lg">
+          <p>📧 yourmail@example.com</p>
+          <p>🔗 LinkedIn Profile</p>
+          <p>💻 GitHub Profile</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-800 py-6 text-center text-gray-500">
+        © 2026 Saikumar Portfolio. Built with React & Tailwind CSS.
+      </footer>
+    </div>
+  );
+}
